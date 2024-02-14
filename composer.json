@@ -1,0 +1,23 @@
+{
+    "name": "tsybenko/php-objects-array-vs-generator",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Dmytro Tsybenko",
+            "email": "dmytro.tsybenko@spryker.com"
+        }
+    ],
+    "scripts": {
+        "generate-scripts": [
+            "@putenv PLUGINS_COUNT=100",
+            "@php scripts/generate-functions.php"
+        ],
+        "post-autoload-dump": ["@generate-scripts"]
+    },
+    "autoload": {
+        "psr-4": {
+            "Tsybenko\\PhpObjectsArrayVsGenerator\\": "src/"
+        }
+    },
+    "require": {}
+}
